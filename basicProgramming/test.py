@@ -1,3 +1,5 @@
+'''
+
 dict = {'apple' : '사과',
         'banana' : '바나나',
         'school' : '학교',
@@ -79,3 +81,16 @@ print("구매하신 물품은 ")
 
 
 print("이용해 주셔서 감사합니다.")
+
+'''
+
+def factorial(n) :
+    if n==1 :
+        return 1
+    elif n>1 :
+        return n*factorial(n-1)
+
+print(factorial(0))
+print(factorial(1))
+print(factorial(2))
+print(factorial(3))
