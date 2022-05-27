@@ -58,34 +58,30 @@ print(type(you))
 
 # 3
 
-
-class Dept:
-    def __init__(self, deptNo, name):
+class Dept :
+    def __init__(self, deptNo, name) :
         self.deptNo = deptNo
         self.name = name
-
-    def __str__(self):
+    
+    def __str__(self) :
         result = "(" + str(self.deptNo) + " " + self.name + ")"
         return result
 
-
-class Student:
-    def __init__(self, studentNo, name, dept):
+class Student :
+    def __init__(self, studentNo, name, dept) :
         self.studentNo = studentNo
         self.name = name
         self.dept = dept
-
+    
     def __str__(self) -> str:
         result = "(" + str(self.studentNo) + " "
         result += self.name + " " + self.dept.name + ")"
         return result
 
-
 studentList = []
 deptList = []
 
-
-def prepareData():
+def prepareData() :
     global deptList, studentList
     matrials = Dept(100, '신소재공학과')
     mechanics = Dept(200, '기계공학과')
@@ -96,40 +92,39 @@ def prepareData():
     studentList.append(Student(201, '기대승', mechanics))
     studentList.append(Student(202, '기정은', mechanics))
 
-
-def main():
+def main() :
     prepareData()
     print('='*10, 'All Departments List')
-    for dept in deptList:
+    for dept in deptList :
         print(dept)
     print('='*10, 'All Students List')
-    for student in studentList:
+    for student in studentList :
         print(student)
-
 
 main()
 
 
 # 4
 
-class Contact:
-    def __init__(self, name, phoneNumber, email, addr):
+class Contact :
+    def __init__(self, name, phoneNumber, email, addr) :
         self.name = name
         self.phoneNumber = phoneNumber
         self.email = email
         self.addr = addr
 
-    def printInfo(self):
+    def printInfo(self) :
         print('Name : ', self.name)
         print('\tPhone Number : ', self.phoneNumber)
         print('\te-Mail', self.email)
         print('\tAddress : ', self.addr)
 
-
-def setContact():
+def setContact() :
     name = input("Name : ")
     phoneNumber = input("Phone Number : ")
     email = input("e-Mail : ")
     addr = input("Address : ")
     contact = Contact(name, phoneNumber, email, addr)
     return contact
+
+
